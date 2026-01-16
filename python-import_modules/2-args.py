@@ -7,8 +7,8 @@ if __name__ == "__main__":
     #counting only arguments
     args = sys.argv[1:]
 
-    #goes through lenght of,
-    #arguments to count its amount
+    #goes one by one through list of,
+    #arguments and returns its count
     args_count = len(args)
 
     if (args_count == 0):
@@ -16,7 +16,10 @@ if __name__ == "__main__":
     elif (args_count == 1):
         print("1 argument:")
     else:
-        print("{}: arguments:".format(args_count))
+        print("{} arguments:".format(args_count))
 
-    print("{}: {}".format(args_count, str(args))) 
+    for i in range(args_count):
+        print(str[i + 1] + ": " + args[i])
+        
+
     
