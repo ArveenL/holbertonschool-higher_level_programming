@@ -14,6 +14,9 @@ if __name__ == "__main__":
     if (args_count == 0):
         print("no arguments.")
     elif (args_count == 1):
-        print("1 argument:\n")
+        print("1 argument:")
     else:
-        print("{}: {}".format(str(args), args_count))
+        print("{}: arguments:".format(args_count))
+
+    print("{}: {}".format(args_count, str(args))) 
+    
