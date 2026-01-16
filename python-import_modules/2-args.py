@@ -2,7 +2,7 @@
 import sys
 
 if __name__ == "__main__":
-
+    
     #not counting program's name, 
     #counting only arguments
     args = sys.argv[1:]
@@ -14,6 +14,6 @@ if __name__ == "__main__":
     if (args_count == 0):
         print("no arguments.")
     elif (args_count == 1):
-        print("1 argument:")
+        print("1 argument:\n")
     else:
-        print("{}: {}".format(str(args), args_count, ))
+        print("{}: {}".format(str(args), args_count))
