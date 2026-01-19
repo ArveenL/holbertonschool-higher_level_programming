@@ -7,5 +7,5 @@ def replace_in_list(my_list, idx, element):
     #note: return exits the function,
     #so no need for else below
         
-        my_list[idx] = element
-        return my_list
+    my_list[idx] = element
+    return my_list
