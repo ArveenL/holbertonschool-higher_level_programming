@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def multiple_returns(sentence):
 
     first_char = 0
