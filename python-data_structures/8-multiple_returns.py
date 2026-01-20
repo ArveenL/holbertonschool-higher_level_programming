@@ -5,7 +5,7 @@ def multiple_returns(sentence):
     first_char = 0
 
     if len(sentence) > 0:
-        sentence[0] = first_char
+        first_char = sentence[0]
 
     else:
         sentence[0] = None
