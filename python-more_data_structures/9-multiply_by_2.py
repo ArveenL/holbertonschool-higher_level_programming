@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 def multiply_by_2(a_dictionary):
-    for variable in a_dictionary:
-        a_dictionary[variable * 2]
 
-    return a_dictionary
+    new_dictionary = {}
+
+    for index in a_dictionary:
+        new_dictionary = value * 2
+
+    return new_dictionary
