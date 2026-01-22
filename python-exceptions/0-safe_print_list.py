@@ -6,7 +6,7 @@ def safe_print_list(my_list=[], x=0):
     
     for i in range(x):
         try:
-            print(my_list, end="")
+            print(my_list[i], end="")
             count = count + 1
         except IndexError:
             break
@@ -16,6 +16,9 @@ def safe_print_list(my_list=[], x=0):
     # 1. count = tracks actual amount of x-element
     #           + 1 with it every time we've 
     #           printed 1 x-element
+
+    # 1.5 note printing my_list[i] to print elements
+    # per elements and not the whole list at once
 
     # 2. exept IndexError is like saying "until NULL"
     #   in C language
