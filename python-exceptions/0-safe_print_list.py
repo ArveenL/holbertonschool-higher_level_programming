@@ -15,6 +15,7 @@ def safe_print_list(my_list=[], x=0):
     print()
     return count
 
+############_Notes_################################
     # 1. count = tracks actual amount of x-element
     #           + 1 with it every time we've 
     #           printed 1 x-element
