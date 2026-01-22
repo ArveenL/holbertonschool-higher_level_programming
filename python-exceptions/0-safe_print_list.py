@@ -23,7 +23,7 @@ def safe_print_list(my_list=[], x=0):
     # 1.5. note printing my_list[i] to print element
     # per element and not the whole list at once
 
-    # 2. exept IndexError is like saying "until NULL"
+    # 2. except IndexError is like saying "until NULL"
     #   in C language
 
     # 3.  2nd print() is to print new line as per the question
