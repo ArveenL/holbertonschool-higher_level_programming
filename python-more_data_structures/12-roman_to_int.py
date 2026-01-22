@@ -1,23 +1,39 @@
 #!/usr/bin/python3
 
 def roman_to_int(roman_string):
-    
-    if not roman_string or roman_string == "":
+    """Convert a Roman numeral to an integer.
+
+    Args:
+        roman_string (str): Roman numeral string.
+
+    Returns:
+        int: Integer value of the Roman numeral, or 0 if invalid.
+    """
+    if not roman_string:
         return 0
-    
-    roman_map = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+
+    roman_map = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000,
+    }
 
     total = 0
-    n = len(roman_string)
+    length = len(roman_string)
 
-    # Iterate through the string, checking the next character for subtraction cases
-    for i in range(n):
+    for i in range(length):
         current_value = roman_map[roman_string[i]]
-        
-        # If not the last character and current value is less than the next
-        if i < n - 1 and current_value < roman_map[roman_string[i+1]]:
-            total -= current_value # Subtract (e.g., for 'I' in 'IV')
+
+        if (
+            i < length - 1
+            and current_value < roman_map[roman_string[i + 1]]
+        ):
+            total -= current_value
         else:
-            total += current_value # Add (e.g., for 'V' in 'VI' or 'V' in 'IV')
-            
+            total += current_value
+
     return total
