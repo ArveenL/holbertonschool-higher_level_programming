@@ -2,17 +2,15 @@
 
 def safe_print_division(a, b):
 
-    RESULT = None
+    result = None
 
     try:
-        result = a/b
-        return RESULT
+        result = a / b       # assign result first
 
     except (ZeroDivisionError, TypeError):
-        return None  # similar to return 0 if error found
+        result = None        # assign None if division fails
 
     finally:
-        print("Inside result: {}".format(RESULT))
-    
-        return RESULT
+        print("Inside result: {}".format(result))
 
+    return result             # return result after finally
