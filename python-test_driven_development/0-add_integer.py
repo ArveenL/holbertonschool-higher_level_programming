@@ -11,3 +11,4 @@ def add_integer(a, b=98):
     return int(a) + int(b)
 
 # isintance checks if variable is of type mentioned 
+# x
