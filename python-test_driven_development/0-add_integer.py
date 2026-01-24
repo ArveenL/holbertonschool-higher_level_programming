@@ -1,15 +1,21 @@
 #!/usr/bin/python3
-"""Module for integer addition with type checking."""
+"""Module for function of adding integer"""
+
 
 def add_integer(a, b=98):
-    """Return the addition of a and b."""
+    """Adding integers function"""
+
+    # Checking if a and b are float or int
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    return int(a) + int(b)
 
+    # Casting to int if a and b is floating
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    # Return sum of a and b
+    return a + b
