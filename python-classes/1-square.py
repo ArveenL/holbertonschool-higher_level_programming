@@ -14,4 +14,4 @@ class Square:
         :param self: Instance being created
         :param size: Size of square(private information)
         """
-        self.size = size
+        self.__size = size
