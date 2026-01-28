@@ -4,7 +4,7 @@
 
 
 class Square:
-   """
+    """
     Initialize a new Square instance.
 
     :param self: instance being created
