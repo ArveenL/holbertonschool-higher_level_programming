@@ -7,7 +7,7 @@ class : Square
 class Square:
     """private __size object found after 'self'"""
 
-    def _init_(self, size):
+    def __init__(self, size):
         """
         Docstring for _init_
         
