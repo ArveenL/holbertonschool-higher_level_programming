@@ -3,6 +3,7 @@
 Defines a Square class with size, area, and printing functionality.
 """
 
+
 class Square:
     """Represents a square."""
 
@@ -29,7 +30,8 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        """Print the square with '#' characters; print a blank line if size is 0."""
+        """Print the square with '#' characters;
+        print a blank line if size is 0."""
         if self.__size == 0:
             print()
             return
