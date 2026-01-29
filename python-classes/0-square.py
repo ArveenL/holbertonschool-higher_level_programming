@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""
-Creating new class: Square
-"""
+
+"""declare class named Square"""
 
 
 class Square:
-    """
-    no objects just class
-    """
+    """"only class no objects yet"""
     pass
