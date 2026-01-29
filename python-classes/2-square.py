@@ -10,10 +10,11 @@ class Square:
     def __init__(self, size=0):
         self.__size = size
 
-    if type(size) != int:
-        TypeError("size must be an integer")
+        if not isinstance(size, int):
+            TypeError("size must be an integer")
 
-    if size < 0:
-        TypeError("size must be >= 0")
+        if size < 0:
+            TypeError("size must be >= 0")
 
-#adding notes to prevent ds_store bullshit
+# using 'isinstance' instead of 'type(size) != int'
+# because some inheritance thingy
