@@ -3,4 +3,5 @@
 
 
 class Rectangle:
+    """only class no object(s) yet"""
     pass
