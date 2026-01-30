@@ -10,6 +10,7 @@ class Rectangle:
     new: __repr__()"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -57,7 +58,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
-            return "\n".join("#" * self.__width for _ in range(self.__height))
+            return "\n".join(str(self.print_symbol) *
+self.__width for _ in range(self.__height))
+        # Change "#" to str(self.print_symbol)
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
@@ -69,5 +72,5 @@ class Rectangle:
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
 
-# repr() should return a string representation of the rectangle
-#  to be able to recreate a new instance by using eval()
+# add class attribute called 'print_symbol' and use it with
+# __str__() method instead of "#".
