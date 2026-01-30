@@ -62,6 +62,6 @@ class Rectangle:
             return self.width == other.width and self.height == other.height
 
 # __eq__ -> comparing two different objects if they're the same. We use ==
-# self -> Rectangle as defined by class
+# self  -> Rectangle as defined by class
 # False -> (different objects)
 # True  -> (same width & height)
