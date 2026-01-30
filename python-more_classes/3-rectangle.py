@@ -5,8 +5,9 @@ setter"""
 
 class Rectangle:
     """width, height objects with setters / cal area & perimeter
-    of rectangle
-    new: print() & str()"""
+    of rectangle / print() & str()
+
+    new: __eq__ """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -53,3 +54,14 @@ class Rectangle:
             return ""
         else:
             return "\n".join("#" * self.__width for _ in range(self.__height))
+
+    def __eq__(self, other):
+        if not isinstance(other, Rectangle):
+            return False
+        else:
+            return self.width == other.width and self.height == other.height
+
+# __eq__ -> comparing two different objects if they're the same. We use ==
+# self -> Rectangle as defined by class
+# False -> (different objects)
+# True  -> (same width & height)
