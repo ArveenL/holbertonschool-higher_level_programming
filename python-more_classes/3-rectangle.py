@@ -4,7 +4,7 @@ setter"""
 
 
 class Rectangle:
-    """width, height objects with setters / cal area & perimeter 
+    """width, height objects with setters / cal area & perimeter
     of rectangle
     new: print() & str()"""
     def __init__(self, width=0, height=0):
