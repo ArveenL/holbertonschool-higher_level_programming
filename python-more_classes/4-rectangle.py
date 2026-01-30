@@ -7,7 +7,7 @@ class Rectangle:
     """width, height objects with setters / cal area & perimeter
     of rectangle / print() & str()
 
-    new: __eq__ """
+    new: __repr__"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -57,12 +57,6 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
-
-    def __eq__(self, other):
-        if not isinstance(other, Rectangle):
-            return False
-        else:
-            return self.width == other.width and self.height == other.height
 
 # __eq__ -> comparing two different objects if they're the same. We use ==
 # self  -> Rectangle as defined by class
