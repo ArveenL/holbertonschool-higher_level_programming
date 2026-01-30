@@ -55,12 +55,14 @@ class Rectangle:
             return 2 * (self.__width + self.__height)
 
     def __str__(self):
+        # Change "#" to str(self.print_symbol)
         if self.__width == 0 or self.__height == 0:
             return ""
-        else:
-            return "\n".join(str(self.print_symbol) *
-self.__width for _ in range(self.__height))
-        # Change "#" to str(self.print_symbol)
+
+        result = []
+        for _ in range(self.__height):
+            result.append(str(self.print_symbol) * self.__width)
+        return "\n".join(result)
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
@@ -69,8 +71,5 @@ self.__width for _ in range(self.__height))
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
-    def __repr__(self):
-        return f"Rectangle({self.__width}, {self.__height})"
-
 # add class attribute called 'print_symbol' and use it with
-# __str__() method instead of "#".
+# __str__() method instead of "#"
