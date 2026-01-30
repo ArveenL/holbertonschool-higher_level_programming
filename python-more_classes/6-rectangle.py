@@ -6,11 +6,11 @@ setter"""
 class Rectangle:
     """width, height objects with setters / cal area & perimeter
     of rectangle / print() & str() / del
-    
+
     new: number_of_instances class attribute"""
-    
+
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -58,11 +58,10 @@ class Rectangle:
             return ""
         else:
             return "\n".join("#" * self.__width for _ in range(self.__height))
-    
+
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
-    
+
     def __del__(self):
         Rectangle.number_of_instances -= 1 
         print("Bye rectangle...")
-    
