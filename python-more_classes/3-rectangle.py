@@ -65,3 +65,4 @@ class Rectangle:
 # self  -> Rectangle as defined by class
 # False -> (different objects)
 # True  -> (same width & height)
+# ..
