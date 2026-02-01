@@ -86,5 +86,5 @@ class Rectangle:
         return rect_2
 
 
-# staticmethod means the method doesn't need self or the class; 
+# staticmethod means the method doesn't need self or the class;
 # it's just a function that lives inside the class:
