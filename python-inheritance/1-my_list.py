@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """define a parent and child class & print in ascending"""
 
-class list(Mylist):
+class Mylist(list):
     """Mylist inherits FROM list"""
 
 
