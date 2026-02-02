@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
+    """i'm i supposed to docstring here too?"""
     return dir(obj)
