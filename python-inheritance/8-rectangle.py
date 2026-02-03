@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""new: Public instance method: def integer_validator(self, name, value):
+"""new: Public instance method: def integer_validator(self, name, value):
 that validates value:
 you can assume name is always a string
 
