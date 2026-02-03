@@ -11,7 +11,7 @@ class Square(Rectangle):
         """Initialize Square with validated size."""
         self.integer_validator("size", size)
         self.__size = size
-        # Since a square is a rectangle with equal width and height
+        # A square is a rectangle with width == height == size
         super().__init__(size, size)
 
     def area(self):
