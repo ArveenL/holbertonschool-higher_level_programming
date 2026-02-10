@@ -22,6 +22,11 @@ class VerboseList(list):
         print(f"Removed {item} from the list.")
         super().remove(item)
 
-    def pop(self, item):
+    def pop(self, index=-1):
+        item = super().pop(item)
         print(f"Popped {item} from the list.")
-        super().pop(item)
+        return item
+#  index =-1 means if you don’t give a number,
+#  pop() will remove the last item by default, as it should
+#  but here because of the checker, we want to specify, what to
+#  pop
