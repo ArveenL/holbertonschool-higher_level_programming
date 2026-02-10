@@ -23,7 +23,7 @@ class VerboseList(list):
         super().remove(item)
 
     def pop(self, index=-1):
-        item = super().pop(item)
+        item = super().pop(index)
         print(f"Popped {item} from the list.")
         return item
 #  index =-1 means if you don’t give a number,
