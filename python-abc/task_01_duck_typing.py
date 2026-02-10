@@ -25,7 +25,7 @@ class Circle(Shape):  # <- concrete class
         return math.pi * (self.radius ** 2)
     
     def perimeter(self):
-        return 2 * math.pi * 2 * self.radius
+        return 2 * math.pi * self.radius  # <- fixed: removed extra 2
 
 
 class Rectangle(Shape):
