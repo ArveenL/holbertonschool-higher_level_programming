@@ -19,13 +19,13 @@ class Shape(ABC):  # <- ??
 
 class Circle(Shape):  # <- concrete class
     def __init__(self, radius):  # <- constructor, to make the variable radius, run
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         return math.pi * (self.radius ** 2)
     
     def perimeter(self):
-        return math.pi * 2 * self.radius
+        return 2 * math.pi * 2 * self.radius
 
 
 class Rectangle(Shape):
