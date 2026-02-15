@@ -7,7 +7,7 @@ class Square:
     """add value to object, check type &
     value of object, return Error accordingly"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0): #object
         self.__size = size
 
         if not isinstance(size, int):
