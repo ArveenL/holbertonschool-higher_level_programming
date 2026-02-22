@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -34,6 +35,9 @@ def add_user():
 
     data = request.get_json()
 
+    if data is None:
+        return jsonify({"error": "Invalid JSON"}), 400
+
     username = data.get("username")
     if not username:
         return jsonify({"error": "Username is required"}), 400
@@ -41,13 +45,9 @@ def add_user():
     if username in users:
         return jsonify({"error": "Username already exists"}), 409
 
-    # Remove username from stored object
-    user_data = data.copy()
-    user_data.pop("username")
+    users[username] = data
 
-    users[username] = user_data
-
-    return jsonify(user_data)
+    return jsonify(data), 201
 
 
 if __name__ == "__main__":
