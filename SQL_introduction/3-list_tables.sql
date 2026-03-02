@@ -1,5 +1,6 @@
 -- script that lists all tables in database named mysql
 
+
 SHOW TABLES;
 
 # command line : mysql -hlocalhost -uroot -p mysql , 
