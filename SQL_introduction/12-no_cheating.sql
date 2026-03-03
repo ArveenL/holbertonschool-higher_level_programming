@@ -3,4 +3,3 @@
 UPDATE score
 SET score = 10 
 FROM name = 'Bob' 
-FROM second_table;
