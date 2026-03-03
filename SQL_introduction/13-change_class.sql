@@ -3,4 +3,4 @@
 
 FROM second_table
 DROP score
-WHERE score <= 5
+WHERE score <= 5;
