@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS second_table(
     Id INT,
     name VARCHAR(256),
     score INT
-)
+);
