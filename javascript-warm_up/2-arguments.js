@@ -1,11 +1,11 @@
 #!/usr/bin/node
-const args = ProcessingInstruction.argv.slice(2);
+const args = process.argv.slice(2);
 
-if (argv === 0)  {
+if (argv.lenght === 0)  {
     console.log('No argument');
 }
 
-else if (argv === 1) {
+else if (argv.lenght === 1) {
     console.log('Argument found');
 }
 
