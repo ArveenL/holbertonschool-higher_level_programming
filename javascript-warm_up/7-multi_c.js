@@ -3,7 +3,7 @@
 const args = process.argv.slice(2);
 const x = parseInt(process.argv[0]);
 
-if (isNaN(args[0])) {
+if (isNaN(x)) {
     console.log('Missing number of occurrences'); 
 }
 
