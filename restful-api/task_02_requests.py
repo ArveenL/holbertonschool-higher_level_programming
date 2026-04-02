@@ -6,8 +6,8 @@ Module for fetching and processing posts from JSONPlaceholder API
 import requests
 import csv
 
-
-URL = "https://jsonplaceholder.typicode.com/posts" # keeps things clean
+# API endpoint
+URL = "https://jsonplaceholder.typicode.com/posts"
 
 
 def fetch_and_print_posts():
@@ -22,6 +22,8 @@ def fetch_and_print_posts():
         posts = response.json()
         for post in posts:
             print(post.get("title"))
+    else:
+        print("Failed to fetch posts.")
 
 
 def fetch_and_save_posts():
@@ -33,7 +35,7 @@ def fetch_and_save_posts():
     if response.status_code == 200:
         posts = response.json()
 
-        # Create a list of dictionaries with only required fields
+        # Keep only required fields
         structured_posts = [
             {
                 "id": post.get("id"),
@@ -43,10 +45,20 @@ def fetch_and_save_posts():
             for post in posts
         ]
 
-        # Write to CSV file
+        # Write to CSV
         with open("posts.csv", mode="w", newline="", encoding="utf-8") as file:
             fieldnames = ["id", "title", "body"]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
 
             writer.writeheader()
             writer.writerows(structured_posts)
+
+        print("Posts saved to posts.csv successfully.")
+    else:
+        print("Failed to fetch posts.")
+
+
+# Run functions if file is executed directly
+if __name__ == "__main__":
+    fetch_and_print_posts()
+    fetch_and_save_posts()
