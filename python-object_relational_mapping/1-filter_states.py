@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """List states whose names start with uppercase N."""
 
@@ -25,3 +24,4 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
+
